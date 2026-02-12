@@ -1,0 +1,17 @@
+name: Hello world workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+  ## comment
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps: # Datatypen "list" in YAML
+      - name: Run hello world
+        run: echo "Hello world"
+        shell: bash
